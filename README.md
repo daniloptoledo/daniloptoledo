@@ -11,12 +11,10 @@ Sistema web desenvolvido para apoiar o catálogo de revenda da ProAventura.
 
 **Tecnologias e conceitos:** HTML, CSS, JavaScript, Supabase, Netlify, autenticação, banco de dados e controle de acesso.
 
-### Sinalizador de Câmeras de Estúdio
-Projeto acadêmico de sistema automatizado utilizando **Arduino Mega 2560 e Python** para identificação visual da câmera ativa em estúdio.
+### [Sinalizador de Câmeras de Estúdio](https://github.com/daniloptoledo/sinalizador-cameras-estudio)
+Projeto acadêmico desenvolvido a partir de uma necessidade real de um estúdio audiovisual. O protótipo utiliza **Arduino Mega 2560 e módulos LED RGB WS2812B**, dando continuidade a uma etapa anterior de integração entre **ATEM Mini Pro, Python e Arduino**.
 
-**Conceitos:** lógica de programação, microcontroladores, circuitos eletrônicos, automação e integração hardware-software.
-
-> O repositório público deste projeto será adicionado ao perfil posteriormente.
+**Conceitos:** sistemas embarcados, lógica de programação, microcontroladores, eletrônica, comunicação serial, automação e integração hardware-software.
 
 ## 🧠 Conhecimentos e interesses
 
