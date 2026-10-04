@@ -26,9 +26,9 @@ Aplicação web instalável para apoiar a rotina de uma profissional de psicolog
 
 ### Financeiro Familiar
 
-Aplicação para controle simples de receitas, despesas, vencimentos, cartões e projeção mensal, com acesso protegido para membros da família.
+Aplicação web responsiva em uso para controle de receitas, despesas, vencimentos, recorrências, cartões, faturas, projeções e resumo anual, com acesso protegido para membros da família.
 
-**Tecnologias e conceitos:** Next.js, TypeScript, Supabase/PostgreSQL, Vercel, autenticação, recuperação de senha e RLS. Projeto privado em desenvolvimento.
+**Tecnologias e conceitos:** Next.js, TypeScript, Supabase/PostgreSQL, Vercel, autenticação, RLS, auditoria, testes e CI. MVP utilizável com deploy verificado; código privado.
 
 ## 🧠 Conhecimentos e interesses
 
