@@ -15,6 +15,8 @@ Meu foco é **IA aplicada e automação**: pegar um problema real (de uma empres
 **Stack:** HTML/CSS/JS, Supabase (PostgreSQL, RLS, Edge Functions), Netlify.
 **Status:** em uso piloto · código privado · [página pública do projeto](https://github.com/daniloptoledo/catalogo-proaventura)
 
+![Catálogo B2B ProAventura — catálogo do revendedor com filtros, selos e cotação (produtos e preços fictícios)](assets/catalogo-capa.png)
+
 ### Sistema de Chamada da Crisma
 **Problema:** a presença de cerca de 100 jovens em encontros e missas era controlada em planilha.
 **Solução:** app para catequistas registrarem presença, com alerta automático a partir de 3 faltas não justificadas e importação do histórico em Excel (com prévia e sem duplicatas).
