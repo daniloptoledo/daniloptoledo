@@ -1,50 +1,36 @@
-# Olá, eu sou o Danilo 👋
+Danilo Portilho
 
-🎓 Estudante de **Engenharia da Computação no UNISAL**, com conclusão prevista para dezembro de 2028.
+Estudante de Engenharia da Computação no UNISAL (conclusão prevista para dez/2028), em Campinas, SP. Trabalho com operação e tecnologia na ProAventura desde set/2026.
 
-Tenho interesse em **IA aplicada, dados, QA/testes, sistemas, produto e automação**. Em projetos acadêmicos e reais, venho desenvolvendo experiência com aplicações web, autenticação, banco de dados, proteção de acesso, testes e integração entre hardware e software.
+Meu foco é IA aplicada e automação: pegar um problema real (de uma empresa, da minha família, da minha comunidade), definir a solução e entregar algo que as pessoas usam de verdade.
 
-## 🚀 Projetos
+Como eu trabalho: desenvolvo com agentes de IA (Claude Code, Codex). Eu levanto o problema com quem vai usar e defino escopo, regras e critérios de aceite. Os agentes fazem a maior parte da implementação, e eu reviso, testo e publico. Os quatro projetos abaixo estão em uso real.
 
-### [Catálogo ProAventura](https://github.com/daniloptoledo/catalogo-proaventura)
+Projetos
+Catálogo B2B — ProAventura
 
-Sistema web para apoiar o catálogo B2B de revendedores da ProAventura, com autenticação, controle de acesso, gerenciamento de produtos e fluxo de cotação.
+Problema: a equipe comercial mandava PDF para cada revendedor que queria cotar um produto. Solução: catálogo web com login para revendedores e equipe, filtros, carrinho de cotação e painel interno. Destaques: estoque sincronizado com o ERP (Bling) via webhook; confirmação de cotação por WhatsApp (BotConversa), em piloto. Stack: HTML/CSS/JS, Supabase (PostgreSQL, RLS, Edge Functions), Netlify. Status: em uso piloto · código privado · página pública do projeto
 
-**Tecnologias e conceitos:** HTML, CSS, JavaScript, Supabase, Netlify, banco de dados, RLS e segurança de acesso.
+Sistema de Chamada da Crisma
 
-### [Sinalizador de Câmeras de Estúdio](https://github.com/daniloptoledo/sinalizador-cameras-estudio)
+Problema: a presença de cerca de 100 jovens em encontros e missas era controlada em planilha. Solução: app para catequistas registrarem presença, com alerta automático a partir de 3 faltas não justificadas e importação do histórico em Excel (com prévia e sem duplicatas). Destaques: permissões por perfil e privacidade como requisito central (dados de menores); bancos de teste e produção separados. Stack: Cloudflare Pages, Cloudflare D1 (SQLite). Status: em uso desde out/2026 · código privado
 
-Projeto acadêmico criado para uma necessidade real de estúdio audiovisual. Utiliza Arduino Mega 2560 e módulos LED RGB WS2812B, dando continuidade à integração entre ATEM Mini Pro, Python e Arduino.
+Financeiro Familiar
 
-**Tecnologias e conceitos:** Arduino, C/C++, Python, comunicação serial, eletrônica, automação e integração hardware-software.
+Problema: organizar as finanças da casa sem depender de lançamento manual. Solução: app com sincronização bancária diária (Open Finance), conciliação entre contas, detecção de transferências internas e duplicidades, recorrências e previsão dos próximos meses. Destaques: auditoria de edições, nenhuma credencial bancária armazenada, testes com dados sintéticos e CI. Stack: Next.js, TypeScript, Supabase/PostgreSQL, Vercel. Status: em uso pela família · código privado
 
-### AP Consultório
+Sinalizador de Câmeras de Estúdio
 
-Aplicação web instalável para apoiar a rotina de uma profissional de psicologia, reunindo agenda, pacientes, registros de evolução, financeiro, lembretes e notificações.
+Problema: em gravações com várias câmeras, o apresentador não sabe para qual câmera olhar. Solução: sinalização luminosa por câmera, lendo o estado da mesa de corte Blackmagic ATEM Mini Pro. Projeto acadêmico feito para o estúdio real da Comunidade Católica Pantokrator. Destaques: integração ATEM → Python → Arduino validada; módulos LED RGB WS2812B; próxima etapa sem fio com ESP32 (projeto de iniciação científica para 2027). Stack: Python, C/C++ (Arduino), ESP32, comunicação serial. Status: protótipo funcional · site do projeto · código
 
-**Tecnologias e conceitos:** React, TypeScript, PWA, Supabase, RLS e Web Push. O código é privado por envolver um sistema de uso profissional.
+AP Consultório
 
-### Financeiro Familiar
+App instalável (PWA) de agenda, pacientes, evolução e financeiro para um consultório de psicologia. Stack: React, TypeScript, Supabase, Web Push. Status: em uso · código privado (dados de saúde)
 
-Aplicação web responsiva em uso para controle de receitas, despesas, vencimentos, recorrências, cartões, faturas, projeções e resumo anual, com acesso protegido para membros da família.
+Conhecimentos
+Uso no dia a dia: Supabase/PostgreSQL, Git/GitHub, deploy (Vercel, Netlify, Cloudflare), agentes de IA para desenvolvimento
+Contato em projetos, em consolidação: Python, SQL, JavaScript/TypeScript, React, Next.js
+Acadêmico: C, C#, Java, Arduino
+Procurando
 
-**Tecnologias e conceitos:** Next.js, TypeScript, Supabase/PostgreSQL, Vercel, autenticação, RLS, auditoria, testes e CI. MVP utilizável com deploy verificado; código privado.
-
-## 🧠 Conhecimentos e interesses
-
-- IA aplicada, dados e automação
-- QA, testes e suporte de sistemas
-- Lógica de programação
-- Noções de C, C#, Java e Python
-- React, TypeScript e desenvolvimento web
-- Supabase, PostgreSQL e Netlify
-- Git, GitHub, Excel e Pacote Office
-- Integração hardware-software
-
-## 📚 Atualmente
-
-Busco uma oportunidade de estágio em tecnologia para aplicar meus conhecimentos em **IA, dados, QA, sistemas, produto ou automação**, com foco em aprender e contribuir em problemas reais.
-
----
-
-📍 Campinas, SP
+Estágio em IA aplicada, dados, automação, QA ou sistemas, para aprender e contribuir em problemas reais.
