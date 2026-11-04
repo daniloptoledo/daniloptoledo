@@ -31,6 +31,8 @@ Meu foco é **IA aplicada e automação**: pegar um problema real (de uma empres
 **Stack:** Next.js, TypeScript, Supabase/PostgreSQL, Vercel.
 **Status:** em uso pela família · código privado
 
+![Financeiro Familiar — visão do mês no computador e no celular (dados fictícios)](assets/financeiro-capa.png)
+
 ### Sinalizador de Câmeras de Estúdio
 **Problema:** em gravações com várias câmeras, o apresentador não sabe para qual câmera olhar.
 **Solução:** sinalização luminosa por câmera, lendo o estado da mesa de corte Blackmagic ATEM Mini Pro. Projeto acadêmico feito para o estúdio real da Comunidade Católica Pantokrator.
