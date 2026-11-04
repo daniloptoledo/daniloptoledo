@@ -48,12 +48,13 @@ Meu foco é **IA aplicada e automação**: pegar um problema real (de uma empres
 App instalável (PWA) de agenda, pacientes, evolução e financeiro para um consultório de psicologia.
 **Stack:** React, TypeScript, Supabase, Web Push. **Status:** em uso · código privado (dados de saúde)
 
-## Conhecimentos
+## Como contribuo
 
-- **Uso no dia a dia:** Supabase/PostgreSQL, Git/GitHub, deploy (Vercel, Netlify, Cloudflare), agentes de IA para desenvolvimento
-- **Contato em projetos, em consolidação:** Python, SQL, JavaScript/TypeScript, React, Next.js
-- **Acadêmico:** C, C#, Java, Arduino
+- **Produto:** levanto o problema com quem vai usar e defino escopo, regras e critérios de aceite
+- **Qualidade:** testo e valido cada entrega antes de colocar em uso
+- **IA e automação:** desenvolvo com agentes de IA (Claude Code, Codex) e integro sistemas via API e webhook (ERP Bling, WhatsApp, Open Finance)
+- **Tecnologias usadas nos projetos** (implementação feita com agentes de IA): Supabase/PostgreSQL, React, Next.js, Vercel, Netlify, Cloudflare, Git/GitHub
 
 ## Procurando
 
-Estágio em **IA aplicada, dados, automação, QA ou sistemas**, para aprender e contribuir em problemas reais.
+Estágio em **IA aplicada, automação, produto, QA ou dados**, para aprender e contribuir em problemas reais.
