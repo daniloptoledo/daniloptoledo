@@ -4,6 +4,8 @@ Estudante de **Engenharia da Computação no UNISAL** (conclusão prevista para 
 
 Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da minha família, da minha comunidade) e transformar em um sistema que as pessoas usam de verdade.
 
+**Resultado em destaque:** o catálogo B2B que construí para a ProAventura reduziu o tempo de uma cotação para revendedor de **mais de 1 hora para 10 a 15 minutos** (cerca de 80% menos tempo).
+
 **Como eu trabalho:** desenvolvo em co-participação com agentes de IA. O Claude Code implementa em uma branch, o Codex revisa o código e eu reviso cada alteração, rodo os testes e só então autorizo o commit. Levanto os requisitos com quem vai usar, defino critérios de aceite e documento a arquitetura de cada projeto.
 
 ## Em construção
@@ -17,8 +19,9 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 ## Projetos em uso
 
 ### Catálogo B2B — ProAventura
-**Problema:** a equipe comercial mandava PDF para cada revendedor que queria cotar um produto.
+**Problema:** a equipe comercial mandava PDF para cada revendedor que queria cotar um produto, e cada cotação levava mais de 1 hora.
 **Solução:** portal de cotação com login para revendedores e equipe, filtros, carrinho de cotação e painel interno.
+**Resultado:** a cotação caiu de **mais de 1 hora para 10 a 15 minutos** (cerca de 80% menos tempo), comparando o mesmo atendimento antes e depois do portal.
 **Arquitetura:** login pelo Supabase Auth (JWT); o PostgreSQL decide o acesso com Row Level Security, e o preço de revenda só sai do banco para revendedor aprovado. Integrações rodam no servidor (Edge Functions): estoque do ERP Bling via OAuth 2.0 e webhook com assinatura HMAC, e notificação de cotação por WhatsApp.
 **Stack:** JavaScript, PostgreSQL (Supabase), Edge Functions, Netlify.
 **Status:** em desenvolvimento, com uso piloto · código privado · [página pública do projeto](https://github.com/daniloptoledo/catalogo-proaventura)
@@ -38,6 +41,7 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 ### Sistema de Chamada da Crisma
 **Problema:** a presença dos jovens em encontros e missas era controlada em planilha.
 **Solução:** app para a equipe de catequistas registrar presença, com indicadores de faltas por tipo de evento, alerta conforme a regra da coordenação e importação do histórico em Excel (com prévia e sem duplicatas).
+**Em números:** 102 jovens em 5 grupos, todos importados da planilha para o sistema.
 **Arquitetura:** backend em JavaScript no Cloudflare com banco SQL (D1); PIN guardado com PBKDF2, sessão em cookie HttpOnly e permissões checadas no servidor a cada rota, com auditoria. Privacidade é requisito central (dados de menores).
 **Qualidade:** testes de API, regras e banco rodando no GitHub Actions a cada pull request.
 **Stack:** React, JavaScript, SQL (Cloudflare D1).
@@ -59,6 +63,7 @@ Sinalização luminosa que mostra ao apresentador qual câmera está no ar, lend
 
 ## Habilidades
 
+- **IA aplicada:** desenvolvimento com agentes de IA (Claude Code, Codex), engenharia de prompts, revisão e teste do que a IA produz
 - **Dados:** SQL (PostgreSQL, SQLite), modelagem relacional, importação e validação de dados
 - **Integrações:** APIs REST, webhooks, OAuth 2.0, autenticação JWT
 - **Linguagens:** JavaScript/TypeScript; Python em desenvolvimento no projeto de pedidos
@@ -67,4 +72,4 @@ Sinalização luminosa que mostra ao apresentador qual câmera está no ar, lend
 
 ## Procurando
 
-Estágio em **automação, dados ou IA aplicada**, para aprender e contribuir em problemas reais.
+Estágio em **IA aplicada, automação, dados, produto ou QA**, para aprender e contribuir em problemas reais.
