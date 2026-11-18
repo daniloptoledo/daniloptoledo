@@ -65,8 +65,10 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 ## Outros projetos
 
 ### Sinalizador de Câmeras de Estúdio
-Sinalização luminosa que mostra ao apresentador qual câmera está no ar, lendo a mesa de corte Blackmagic ATEM Mini Pro. Projeto acadêmico para o estúdio da Comunidade Católica Pantokrator; próxima etapa sem fio com ESP32 (iniciação científica 2027).
-**Stack:** Python, C/C++ (Arduino), ESP32. **Status:** protótipo funcional · [site](https://sinalizador-cameras-site.pages.dev) · [código](https://github.com/daniloptoledo/sinalizador-cameras-estudio)
+Sinalização luminosa que mostra ao apresentador qual câmera está no ar, lendo a mesa de corte Blackmagic ATEM Mini Pro. Projeto Integrador do 4º semestre, feito para o estúdio da Comunidade Católica Pantokrator; próxima etapa sem fio com ESP32 (iniciação científica 2027).
+**Stack:** Python, C/C++ (Arduino), ESP32. **Status:** protótipo funcional · [vídeo de demonstração](https://youtu.be/DR60vTPyErs) · [site](https://sinalizador-cameras-site.pages.dev) · [código](https://github.com/daniloptoledo/sinalizador-cameras-estudio)
+
+[![Sinalizador de Câmeras — vídeo de demonstração do Projeto Integrador](https://i.ytimg.com/vi/DR60vTPyErs/hqdefault.jpg)](https://youtu.be/DR60vTPyErs)
 
 ## Habilidades
 
