@@ -19,6 +19,7 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 **Solução:** portal de cotação com login para revendedores e equipe, filtros, carrinho de cotação e painel interno.
 **Resultado:** a cotação caiu de **mais de 1 hora para 10 a 15 minutos** (cerca de 80% menos tempo), comparando o mesmo atendimento antes e depois do portal.
 **Arquitetura:** login pelo Supabase Auth (JWT); o PostgreSQL decide o acesso com Row Level Security, e o preço de revenda só sai do banco para revendedor aprovado. Integrações rodam no servidor (Edge Functions): estoque do ERP Bling via OAuth 2.0 e webhook com assinatura HMAC, e notificação de cotação por WhatsApp.
+**Qualidade:** mais de 60 testes automatizados (incluindo replays de webhook e SQL com permissões simuladas) rodando no GitHub Actions.
 **Stack:** JavaScript, PostgreSQL (Supabase), Edge Functions, Netlify.
 **Status:** em desenvolvimento, com uso piloto · código privado · [página pública do projeto](https://github.com/daniloptoledo/catalogo-proaventura)
 
@@ -29,7 +30,7 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 **Solução:** app para a equipe de catequistas registrar presença, com indicadores de faltas por tipo de evento, alerta conforme a regra da coordenação e importação do histórico em Excel (com prévia e sem duplicatas).
 **Resultado:** a chamada caiu de **10 a 15 minutos para 2 minutos**, com 102 jovens em 5 grupos já no sistema.
 **Arquitetura:** backend em JavaScript no Cloudflare com banco SQL (D1); PIN guardado com PBKDF2, sessão em cookie HttpOnly e permissões checadas no servidor a cada rota, com auditoria. Privacidade é requisito central (dados de menores).
-**Qualidade:** testes de API, regras e banco rodando no GitHub Actions a cada pull request.
+**Qualidade:** 55 testes de API, regras e banco rodando no GitHub Actions a cada pull request.
 **Stack:** React, JavaScript, SQL (Cloudflare D1).
 **Status:** em uso desde out/2026 · código privado
 
@@ -40,7 +41,7 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 **Solução:** sincronização bancária diária via Open Finance, conciliação entre contas PF e PJ, detecção de transferências internas e duplicidades e projeção de fluxo de caixa.
 **Resultado:** o lançamento manual de cerca de **1 hora virou automático**.
 **Arquitetura:** o navegador só calcula o que exibe; escritas críticas (baixa de pagamento, parcelas) são funções atômicas no PostgreSQL, protegidas por RLS; integrações bancárias e notificações rodam em rotas de servidor na Vercel. Nenhuma credencial bancária é armazenada.
-**Qualidade:** testes automatizados e CI no GitHub Actions; backup diário cifrado.
+**Qualidade:** 274 testes automatizados e CI no GitHub Actions; backup diário cifrado.
 **Stack:** TypeScript, Next.js, PostgreSQL (Supabase), Vercel.
 **Status:** em uso pela família · código privado
 
@@ -54,13 +55,13 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 **Stack:** React, TypeScript, PostgreSQL (Supabase), Web Push.
 **Status:** em uso · código privado (dados de saúde)
 
-## Em construção
+## Pausado
 
 ### Pipeline de Pedidos de Marketplace
 **O que é:** pipeline ETL em **Python** que lê pedidos do Mercado Livre e da Amazon (com formatos diferentes), limpa e valida os dados com **Pandas** e grava num **PostgreSQL** rodando em **Docker**. Linhas inválidas vão para uma tabela de rejeitados, com o motivo.
 **Destaques:** constraints e chaves no banco como segunda barreira de validação; carga idempotente (rodar duas vezes não duplica); testes com pytest. Dados 100% sintéticos.
 **Próximas etapas:** KPIs com SQL, API REST com FastAPI e login JWT, CI no GitHub Actions.
-**Status:** etapa 1 em andamento · [código](https://github.com/daniloptoledo/pipeline-pedidos-marketplace)
+**Status:** pausado na etapa 1 enquanto foco em outro projeto · [código](https://github.com/daniloptoledo/pipeline-pedidos-marketplace)
 
 ## Outros projetos
 
