@@ -4,17 +4,13 @@ Estudante de **Engenharia da Computação no UNISAL** (conclusão prevista para 
 
 Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da minha família, da minha comunidade) e transformar em um sistema que as pessoas usam de verdade.
 
-**Resultado em destaque:** o catálogo B2B que construí para a ProAventura reduziu o tempo de uma cotação para revendedor de **mais de 1 hora para 10 a 15 minutos** (cerca de 80% menos tempo).
+**Resultados em uso real:**
+- **Catálogo B2B (ProAventura):** cotação para revendedor de **mais de 1 hora para 10 a 15 minutos**.
+- **Chamada da Crisma:** registrar a presença de um encontro de **10 a 15 minutos para 2 minutos**.
+- **Financeiro Familiar:** cerca de **1 hora passando gastos para planilha** virou sincronização **automática**.
+- **AP Consultório:** chamar os pacientes no WhatsApp de **cerca de 30 minutos para 2 minutos**, com agenda e pagamentos sob controle.
 
 **Como eu trabalho:** desenvolvo em co-participação com agentes de IA. O Claude Code implementa em uma branch, o Codex revisa o código e eu reviso cada alteração, rodo os testes e só então autorizo o commit. Levanto os requisitos com quem vai usar, defino critérios de aceite e documento a arquitetura de cada projeto.
-
-## Em construção
-
-### Pipeline de Pedidos de Marketplace
-**O que é:** pipeline ETL em **Python** que lê pedidos do Mercado Livre e da Amazon (com formatos diferentes), limpa e valida os dados com **Pandas** e grava num **PostgreSQL** rodando em **Docker**. Linhas inválidas vão para uma tabela de rejeitados, com o motivo.
-**Destaques:** constraints e chaves no banco como segunda barreira de validação; carga idempotente (rodar duas vezes não duplica); testes com pytest. Dados 100% sintéticos.
-**Próximas etapas:** KPIs com SQL, API REST com FastAPI e login JWT, CI no GitHub Actions.
-**Status:** etapa 1 em andamento · [código](https://github.com/daniloptoledo/pipeline-pedidos-marketplace)
 
 ## Projetos em uso
 
@@ -28,20 +24,10 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 
 ![Catálogo B2B ProAventura — catálogo do revendedor com filtros, selos e cotação (produtos e preços fictícios)](assets/catalogo-capa.png)
 
-### Financeiro Familiar
-**Problema:** organizar as finanças da casa sem depender de lançamento manual.
-**Solução:** sincronização bancária diária via Open Finance, conciliação entre contas PF e PJ, detecção de transferências internas e duplicidades e projeção de fluxo de caixa.
-**Arquitetura:** o navegador só calcula o que exibe; escritas críticas (baixa de pagamento, parcelas) são funções atômicas no PostgreSQL, protegidas por RLS; integrações bancárias e notificações rodam em rotas de servidor na Vercel. Nenhuma credencial bancária é armazenada.
-**Qualidade:** testes automatizados e CI no GitHub Actions; backup diário cifrado.
-**Stack:** TypeScript, Next.js, PostgreSQL (Supabase), Vercel.
-**Status:** em uso pela família · código privado
-
-![Financeiro Familiar — visão do mês no computador e no celular (dados fictícios)](assets/financeiro-capa.png)
-
 ### Sistema de Chamada da Crisma
-**Problema:** a presença dos jovens em encontros e missas era controlada em planilha.
+**Problema:** a presença dos jovens em encontros e missas era controlada em planilha, e cada chamada levava de 10 a 15 minutos.
 **Solução:** app para a equipe de catequistas registrar presença, com indicadores de faltas por tipo de evento, alerta conforme a regra da coordenação e importação do histórico em Excel (com prévia e sem duplicatas).
-**Em números:** 102 jovens em 5 grupos, todos importados da planilha para o sistema.
+**Resultado:** a chamada caiu de **10 a 15 minutos para 2 minutos**, com 102 jovens em 5 grupos já no sistema.
 **Arquitetura:** backend em JavaScript no Cloudflare com banco SQL (D1); PIN guardado com PBKDF2, sessão em cookie HttpOnly e permissões checadas no servidor a cada rota, com auditoria. Privacidade é requisito central (dados de menores).
 **Qualidade:** testes de API, regras e banco rodando no GitHub Actions a cada pull request.
 **Stack:** React, JavaScript, SQL (Cloudflare D1).
@@ -49,11 +35,32 @@ Meu foco é **automação e dados**: pegar um problema real (de uma empresa, da 
 
 ![Sistema de Chamada da Crisma — dashboard e chamada no celular (dados fictícios)](assets/crisma-capa.png)
 
+### Financeiro Familiar
+**Problema:** organizar as finanças da casa exigia cerca de 1 hora passando gastos e dados bancários para uma planilha.
+**Solução:** sincronização bancária diária via Open Finance, conciliação entre contas PF e PJ, detecção de transferências internas e duplicidades e projeção de fluxo de caixa.
+**Resultado:** o lançamento manual de cerca de **1 hora virou automático**.
+**Arquitetura:** o navegador só calcula o que exibe; escritas críticas (baixa de pagamento, parcelas) são funções atômicas no PostgreSQL, protegidas por RLS; integrações bancárias e notificações rodam em rotas de servidor na Vercel. Nenhuma credencial bancária é armazenada.
+**Qualidade:** testes automatizados e CI no GitHub Actions; backup diário cifrado.
+**Stack:** TypeScript, Next.js, PostgreSQL (Supabase), Vercel.
+**Status:** em uso pela família · código privado
+
+![Financeiro Familiar — visão do mês no computador e no celular (dados fictícios)](assets/financeiro-capa.png)
+
 ### AP Consultório
-**O que é:** app instalável (PWA) de agenda, pacientes, evolução clínica e financeiro para um consultório de psicologia, com lembrete por notificação push.
+**Problema:** a psicóloga se perdia na agenda e levava cerca de 30 minutos para chamar os pacientes da semana.
+**Solução:** app instalável (PWA) de agenda, pacientes, evolução clínica e financeiro, com lembrete por notificação push e atalho para chamar o paciente no WhatsApp.
+**Resultado:** chamar os pacientes caiu de **cerca de 30 minutos para 2 minutos**; a agenda ficou organizada e dá para ver quem já pagou.
 **Arquitetura:** RLS por dono em todas as tabelas; prontuário só pode ser criado e lido, nunca editado ou apagado; envio de notificações por Edge Function protegida por segredo.
 **Stack:** React, TypeScript, PostgreSQL (Supabase), Web Push.
 **Status:** em uso · código privado (dados de saúde)
+
+## Em construção
+
+### Pipeline de Pedidos de Marketplace
+**O que é:** pipeline ETL em **Python** que lê pedidos do Mercado Livre e da Amazon (com formatos diferentes), limpa e valida os dados com **Pandas** e grava num **PostgreSQL** rodando em **Docker**. Linhas inválidas vão para uma tabela de rejeitados, com o motivo.
+**Destaques:** constraints e chaves no banco como segunda barreira de validação; carga idempotente (rodar duas vezes não duplica); testes com pytest. Dados 100% sintéticos.
+**Próximas etapas:** KPIs com SQL, API REST com FastAPI e login JWT, CI no GitHub Actions.
+**Status:** etapa 1 em andamento · [código](https://github.com/daniloptoledo/pipeline-pedidos-marketplace)
 
 ## Outros projetos
 
